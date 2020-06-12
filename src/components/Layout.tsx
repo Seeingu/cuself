@@ -3,6 +3,21 @@ import Head from 'next/head';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithubAlt } from '@fortawesome/free-brands-svg-icons';
 
+const headerItems = [
+  {
+    url: '/blog',
+    title: 'Blog',
+  },
+  {
+    url: '/bookmark',
+    title: 'Bookmark',
+  },
+  {
+    url: '/about',
+    title: 'About',
+  },
+];
+
 export const Layout: React.FC = (props) => {
   const { children } = props;
   return (
@@ -14,14 +29,11 @@ export const Layout: React.FC = (props) => {
       <nav className="block h-20 fixed w-screen font-mono flex items-center">
         <div className="text-4xl flex-initial pl-10 pr-10">~</div>
         <ul className="text-2xl flex-1 flex flex-row items-center">
-          <li className="flex-initial mr-10">
-            <a className="" href="/blog">
-              Blog
-            </a>
-          </li>
-          <li className="flex-initial">
-            <a href="/about">About</a>
-          </li>
+          {headerItems.map((item) => (
+            <li className="layout-li">
+              <a href={item.url}>{item.title}</a>
+            </li>
+          ))}
         </ul>
       </nav>
       <main className="block flex flex-col justify-center items-center min-h-screen pt-20 pb-20">
