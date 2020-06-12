@@ -1,11 +1,32 @@
 import React from 'react';
 import { Layout } from '../src/components/Layout';
-import { EmptyBlock } from '../src/components/Empty';
+
+// TODO: move to persistent storage
+const bookmarks = [
+  {
+    url:
+      'http://goodmath.blogspot.com/2006/05/my-favorite-calculus-lambda-part-1.html',
+    title: 'Lambda Calculus',
+    description: 'The introduction of `Lambda Calculus`',
+  },
+];
 
 const Bookmark: React.FC = () => {
   return (
     <Layout>
-      <EmptyBlock />
+      <div className="grid grid-flow-col grid-cols-3 grid-rows-3 gap-4">
+        {bookmarks.map((bm) => (
+          <div
+            className="max-w-sm rounded p-6 overflow-hidden shadow-lg"
+            key={bm.title}
+          >
+            <a href={bm.url} target="_blank">
+              <h3 className="font-bold text-xl mb-2">{bm.title}</h3>
+              <p>{bm.description}</p>
+            </a>
+          </div>
+        ))}
+      </div>
     </Layout>
   );
 };
