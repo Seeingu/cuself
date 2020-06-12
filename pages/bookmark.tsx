@@ -2,7 +2,7 @@ import React from 'react';
 import { Layout } from '../src/components/Layout';
 import { EmptyBlock } from '../src/components/Empty';
 
-const Blog: React.FC = () => {
+const Bookmark: React.FC = () => {
   return (
     <Layout>
       <EmptyBlock />
@@ -10,4 +10,4 @@ const Blog: React.FC = () => {
   );
 };
 
-export default Blog;
+export default Bookmark;
