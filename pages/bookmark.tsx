@@ -9,6 +9,11 @@ const bookmarks = [
     title: 'Lambda Calculus',
     description: 'The introduction of `Lambda Calculus`',
   },
+  {
+    url: 'http://pages.cs.wisc.edu/~remzi/OSTEP/',
+    title: 'Operating Systems: Three Easy Pieces',
+    description: 'Learning the basis of operating system',
+  },
 ];
 
 const Bookmark: React.FC = () => {
