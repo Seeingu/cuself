@@ -19,7 +19,7 @@ const About = () => {
           </li>
           <li>
             <FontAwesomeIcon fixedWidth icon={faBuilding} size="lg" /> Shanghai
-            Bytedance inc.
+            ByteDance inc.
           </li>
           <li>
             <FontAwesomeIcon fixedWidth icon={faPaperPlane} size="lg" />{' '}
