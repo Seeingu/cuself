@@ -14,6 +14,11 @@ const bookmarks = [
     title: 'Operating Systems: Three Easy Pieces',
     description: 'Learning the basis of operating system',
   },
+  {
+    url: 'http://craftinginterpreters.com/',
+    title: 'Crafting Interpreters',
+    description: 'Learning how to build a(n) simple interpreter/compiler'
+  }
 ];
 
 const Bookmark: React.FC = () => {
