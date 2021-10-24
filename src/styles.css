@@ -1,8 +1,0 @@
-@tailwind base;
-@tailwind components;
-
-.layout-li {
-  @apply flex-initial mr-10;
-}
-
-@tailwind utilities;
