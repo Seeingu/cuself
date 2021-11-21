@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuself plain</title>
+</head>
+<body>
+    <style>
+        :root {
+            font-size: 12px;
+        }
+        body {
+            width: 100vw;
+            font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            color: currentColor;
+            text-decoration: none;
+        }
+        nav {
+            display: flex;
+            flex-direction: row;
+            font-size: 2.5rem;
+        }
+        nav ul {
+            width: 40%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        nav ul li {
+            padding: 1rem;
+            cursor: pointer;
+        }
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 10vh;
+        }
+        #home__image {
+            max-width: 80vw;
+            object-fit: contain;
+
+        }
+    </style>
+    <nav>
+        <ul class="navbar__list">
+            <li data-id="home">
+                    ~
+                </li>
+            <li data-id="pieces">
+                Pieces
+            </li>
+        </ul>
+    </nav>
+    <main id="main-content">
+        <div id="home">
+            <img id="home__image" src='/public/pluto-success-1.png' alt='pluto-success'>
+        </div>
+        <div id="pieces" style="display: none;">
+            try flat
+        </div>
+    </main>
+    <script>
+        const navList = document.querySelector('.navbar__list')
+        const home = document.getElementById('home')
+        const pieces = document.getElementById('pieces')
+        navList.addEventListener('click', evt => {
+            const id = evt.target.dataset.id
+            if (id === 'home') {
+                home.style.display = 'block'
+                pieces.style.display = 'none'
+            }
+            if (id === 'pieces') {
+                home.style.display = 'none'
+                pieces.style.display = 'block'
+            }
+        })
+    </script>
+</body>
+</html>
