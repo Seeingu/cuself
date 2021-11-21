@@ -1,0 +1,20 @@
+{
+  "name": "cuself",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo \"do nothing\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Seeingu/cuself.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Seeingu/cuself/issues"
+  },
+  "homepage": "https://github.com/Seeingu/cuself#readme"
+}
